@@ -1,0 +1,23 @@
+= Github Actions
+
+A summary of actions to use within Github.
+
+== Using any action
+
+The actions are stored in separate folders. To use them, add this to your actions yaml:
+
+[,yaml]
+----
+- name: run this action
+  uses: ds2/gh-actions/hello-world@v1.0.0
+----
+
+== Release an action
+
+After committing it, run:
+
+[,shell]
+----
+git tag -a -m "My release description" v1.0.0
+git push --follow-tags
+----
