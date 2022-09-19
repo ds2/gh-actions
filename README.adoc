@@ -1,5 +1,9 @@
 = Github Actions
 
+image:https://img.shields.io/github/checks-status/ds2/gh-actions/develop[GitHub branch checks state]
+image:https://img.shields.io/github/license/ds2/gh-actions[GitHub]
+image:https://img.shields.io/github/v/release/ds2/gh-actions[GitHub release (latest SemVer)]
+
 A summary of actions to use within Github.
 
 == Using any action
