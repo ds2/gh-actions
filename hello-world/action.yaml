@@ -1,0 +1,12 @@
+name: Hello World
+description: A dummy hello world action that prints "Hello world" in the terminal.
+author: Lexxy23
+
+runs:
+  using: composite
+  steps:
+    - name: print it
+      # if: runner.os == 'linux'
+      id: echo-hw
+      shell: bash
+      run: echo "Hello, world"
