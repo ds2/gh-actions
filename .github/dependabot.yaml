@@ -4,7 +4,7 @@ updates:
   - package-ecosystem: "github-actions" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      timezone: "Europe/Berlin"
+      interval: "daily"
     reviewers: # you can also use reviewers
       - "lexxy23"
     labels:
