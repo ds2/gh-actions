@@ -18,6 +18,8 @@ jobs:
       - name: move tag v1
         run: |
           echo "Moving tag.."
+          git config user.email "lexxy23@users.noreply.github.com"
+          git config user.name "Github"
           git tag -f -a v1
           git push --follow-tags
         env:
