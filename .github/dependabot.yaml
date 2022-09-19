@@ -1,0 +1,13 @@
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      timezone: "Europe/Berlin"
+    reviewers: # you can also use reviewers
+      - "lexxy23"
+    labels:
+      - "githubactions"
+      - "updates"
+    open-pull-requests-limit: 5
