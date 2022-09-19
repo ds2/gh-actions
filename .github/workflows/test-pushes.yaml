@@ -1,0 +1,16 @@
+name: test flows
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  j1:
+    name: test hello world v1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - id: test1
+        uses: ds2/gh-actions/hello-world@v1

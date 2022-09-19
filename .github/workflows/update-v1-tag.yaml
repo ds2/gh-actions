@@ -1,0 +1,22 @@
+name: update v1 tag
+
+on:
+  release:
+    types: [published, edited]
+
+jobs:
+  j1:
+    name: move v1 tag
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout this commit
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - name: move tag v1
+        run: |
+          echo "Moving tag.."
+          git tag -f -a v1
+          git push --follow-tags
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
