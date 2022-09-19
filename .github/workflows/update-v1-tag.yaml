@@ -7,21 +7,9 @@ on:
       - edited
 
 jobs:
-  j1:
-    name: move v1 tag
-    runs-on: ubuntu-22.04
+  actions-tagger:
+    runs-on: windows-latest
     steps:
-      - name: checkout this commit
-        uses: actions/checkout@v3
+      - uses: Actions-R-Us/actions-tagger@latest
         with:
-          ref: ${{ github.event.release.tag_name }}
-      - name: move tag v1
-        run: |
-          echo "Moving tag.."
-          git config user.email "lexxy23@users.noreply.github.com"
-          git config user.name "Github"
-          git tag -f -a -m "update v1 head" v1
-          git push --follow-tags
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          EDITOR: vi
+          publish_latest_tag: true
